@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Dice from './dice';
+import './RollDice.css';
 
 class RollDice extends Component {
 	static defaultProps = {
@@ -17,9 +18,11 @@ class RollDice extends Component {
 	}
 	render() {
 		return (
-			<div>
-				<Dice face={this.state.dice1} />
-				<Dice face={this.state.dice2} />
+			<div className="RollDice">
+				<div className="RollDice-container">
+					<Dice face={this.state.dice1} />
+					<Dice face={this.state.dice2} />
+				</div>
 				<button onClick={this.roll}>Roll Dice!</button>
 			</div>
 		);
